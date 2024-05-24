@@ -14,4 +14,6 @@ install:
       pipy: setup.py
 build:
   /tmp: read, write
-
+threats:
+  operations:
+    MFA: PAM-dependent
