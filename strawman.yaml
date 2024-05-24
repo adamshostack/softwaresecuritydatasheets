@@ -1,0 +1,17 @@
+install:
+  files:
+    projectroot: read, write
+    /tmp: read, write
+    /etc: read
+    user-directed: read, write
+  network:
+    listen-localhost: lowport 
+    listen-internet: lowport
+    outbound: (See MUD https://datatracker.ietf.org/doc/html/rfc8520)
+  privilege:
+    setuid: root, $projectroot/bin/helper-tool 
+  install-process:
+      pipy: setup.py
+build:
+  /tmp: read, write
+
